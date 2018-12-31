@@ -1,1 +1,48 @@
 # Projet Mini Projet 2 : Créer un site web dynamique 
+Coucou vous j'espère que vous avez passé une joyeux noël ! 
+J'ai essayé de faire un peu de mise en page du site c'est pas fou mais ce n'est encore que des essaies alors je vous les mets au cas où
+(J'ai pas réussi à faire marcher le bouton menu)
+
+Je risque de ne pas toujours être libre cet aprés midi mais je reste joignable BISOUS 
+
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8" />
+	<link rel="stylesheet" href="new 1.css" />
+	<title>Site MP</title>
+</head>
+
+<body>
+
+	<button> Menu </button>
+	<script>
+        let nav = document.querySelector('nav')
+        let btn = document.querySelector('button')
+
+        btn.addEventListener('click', () => {
+			nav.classList.toggle('open')
+        })
+    </script>
+	
+	<nav> Menu </nav> 
+	
+	
+	<h1> Voici notre Site ! </h1>
+	<h2> Mini-Projet 2 </h2>
+	<p> Bonjour à vous tous utilisateurs ! </p>
+	<p> Ce charmant site a été réalisé par le groupe 1, composé de Timothée Hémard, Alexandra Miler et Sixtine Vamparys. 
+	Nous sommes tous trois des étudiants en Terminale et lors de ce projet nous sommes lancé le défis de réaliser un site web dynamique. 
+	Nous espérons qu'il vous plait, sur ce nous vous souhaitons une bonne visite ! 
+	Notre objectif était de : 
+	Réaliser en collaboration un site web qi affiche des messages postés par des membres. </p>
+	
+	<footer>
+		<p> Timothée Hémard, Alexandra Miler et Sixtine Vamparys
+		TS1 et TS2 </p>
+	</footer>
+
+</body>
+
+</html>
