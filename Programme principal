@@ -42,7 +42,30 @@ Je risque de ne pas toujours être libre cet aprés midi mais je reste joignable
 		<p> Timothée Hémard, Alexandra Miler et Sixtine Vamparys
 		TS1 et TS2 </p>
 	</footer>
+	
 
 </body>
 
 </html>
+
+<?php 
+
+if isset ($_POST['motdepasse']))
+	(
+	if $_POST['motdepasse'] == "mrcoudertmathsisn"
+		(
+?>
+			<p>Bienvenue sur notre site ! ;) </p>
+<?php
+		)
+	else 
+		(
+?>
+
+<div>
+	<p> Taper le mot de passe </p>
+	
+	<form action="acces_reserve.php" method="post">
+	<input type="password" name="motdepasse"/>
+	<input type="submit" name="VALIDER"/>
+</div>
