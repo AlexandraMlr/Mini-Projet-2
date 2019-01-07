@@ -51,15 +51,15 @@ Je risque de ne pas toujours être libre cet aprés midi mais je reste joignable
 <?php 
 
 if isset ($_POST['motdepasse']))
-	(
+	{
 	if $_POST['motdepasse'] == "mrcoudertmathsisn"
-		(
+		{
 ?>
 			<p>Bienvenue sur notre site ! ;) </p>
 <?php
-		)
+		}
 	else 
-		(
+		{
 ?>
 
 <div>
