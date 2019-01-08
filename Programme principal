@@ -26,12 +26,12 @@
 	
 	<h1> Voici notre Site ! </h1>
 	<h2> Mini-Projet 2 </h2>
-	<p> Bonjour à vous tous utilisateurs ! </p>
+	<p> Bonjour à vous, utilisateurs ! </p>
 	<p> Ce charmant site a été réalisé par le groupe 1, composé de Timothée Hémard, Alexandra Miler et Sixtine Vamparys. 
 	Nous sommes tous trois des étudiants en Terminale et lors de ce projet nous sommes lancé le défis de réaliser un site web dynamique. 
 	Nous espérons qu'il vous plait, sur ce nous vous souhaitons une bonne visite ! 
 	Notre objectif était de : 
-	Réaliser en collaboration un site web qi affiche des messages postés par des membres. </p>
+	Réaliser en collaboration un site web qui affiche des messages postés par les membres.</p>
 	
 	<footer>
 		<p> Timothée Hémard, Alexandra Miler et Sixtine Vamparys
@@ -40,12 +40,14 @@
 
 <?php 
 
-if isset ($_POST['motdepasse']))
+if isset($_POST['motdepasse']))
 	{
-	if $_POST['motdepasse'] == "mrcoudertmathsisn"
+	if $_POST['motdepasse'] == "mrcoudertisn2018"
 		{
 ?>
-			<p>Bienvenue sur notre site ! ;) </p>
+			<p>Mais pour y accéder vous devez tout d'abord entrer le mot de passe. 
+			Nous devons être sur que vous faites bien partie de l'équipe ;) </p>
+		
 <?php
 		}
 	else 
@@ -53,12 +55,14 @@ if isset ($_POST['motdepasse']))
 ?>
 
 <div>
-	<p> Taper le mot de passe </p>
+	<p> Veuillez taper le mot de passe </p>
 	
-	<form action="acces_reserve.php" method="post">
+	<form action="minichat.php" method="post">
 	<input type="password" name="motdepasse"/>
 	<input type="submit" name="VALIDER"/>
+	</form>
 </div>
+
 
 </body>
 
