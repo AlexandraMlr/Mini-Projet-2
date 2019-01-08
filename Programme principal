@@ -1,9 +1,4 @@
 # Projet Mini Projet 2 : Créer un site web dynamique 
-Coucou vous j'espère que vous avez passé une joyeux noël ! 
-J'ai essayé de faire un peu de mise en page du site c'est pas fou mais ce n'est encore que des essaies alors je vous les mets au cas où
-(J'ai pas réussi à faire marcher le bouton menu)
-
-Je risque de ne pas toujours être libre cet aprés midi mais je reste joignable BISOUS 
 
 <!DOCTYPE html>
 <html>
@@ -42,11 +37,6 @@ Je risque de ne pas toujours être libre cet aprés midi mais je reste joignable
 		<p> Timothée Hémard, Alexandra Miler et Sixtine Vamparys
 		TS1 et TS2 </p>
 	</footer>
-	
-
-</body>
-
-</html>
 
 <?php 
 
@@ -69,3 +59,7 @@ if isset ($_POST['motdepasse']))
 	<input type="password" name="motdepasse"/>
 	<input type="submit" name="VALIDER"/>
 </div>
+
+</body>
+
+</html>
