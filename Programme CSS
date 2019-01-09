@@ -39,6 +39,7 @@ nav {
 	color: black;
 	transform: translateX(-100%);
 	transition: 0.3s;
+	<a href="http://www.google.fr">GOOGLE</a></
 }
 
 .open {
