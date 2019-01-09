@@ -3,11 +3,10 @@
 
 <?php
 // Connexion à la base de données 
-	$bdd = new PDO ('mysql:host=localhost;dname=ma_base', 'root', '')
+	$bdd = new PDO ('mysql:host=localhost;dname=ma_base', 'root', '');
 // Insertion du message à l'aide d'une requête préparée
-	$requete = $bdd->prepare('INSERT INTO table_news(titre, texte)
-	VALUES(?, ?)');
-	$requete->execute(array($_POST['titre'],$_POST['texte']))
+	$req = $bdd->prepare('INSERT INTO table_news(titre, texte) VALUES(?, ?)');
+	$req->execute(array($_POST['pseudo'],$_POST['message']));
 	
 // Redirecton du visiteur vers le pape du minichat 
 	header('Location: minichat.php');
