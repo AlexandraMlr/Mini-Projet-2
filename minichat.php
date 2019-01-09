@@ -26,9 +26,8 @@
 	{
 		echo '<p><strong>' . htmlspecialchars($données['titre']) . '</strong> : ' . htmlspecialchars($donnees['texte']) . '</p>';
 	}
-	$reponse ->closeCursor();}
+	$reponse->closeCursor();
 ?>
 	
-
 	</body>
 </html>
