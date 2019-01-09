@@ -22,7 +22,7 @@
 	$reponse = $bdd->query('SELECT titre, texte FROM table_news ORDER BY ID DESC LIMITE 0, 10');
 	
 	//Affichage  de chaque message (toutes les données sont protégées par htmlspecialchars)
-	while ($donnees = $reponse->fetch())
+	while ($donnees = $reponse->fetch());
 	{
 		echo '<p><strong>' . htmlspecialchars($données['titre']) . '</strong> : ' . htmlspecialchars($donnees['texte']) . '</p>';
 	}
