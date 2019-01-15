@@ -1,33 +1,56 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>Mini-Chat</title>
-		<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1"/>
+		<meta charset="utf-8" />
+        <title>Mini-chat</title>
 	</head>
-	
+	<style>
+	form
+	{
+		text-align: center,
+	}
+	</style>
 	<body>
 	
+	<table border="0" align="center" cellpadding="3" cellspacing="3" 
 	<form action="minichat_post.php" method="post">
 		<p>
-		<label for="pseudo">Pseudo</label> : <input type="text" name="titre" id="titre"/><br />
-		<label for="texte" id="texte" /><br />
+		<p>Laissez-nous un message ;)</p>
+		<label for="pseudo">Pseudo</label> : <input type="text" name="pseudo" id="pseudo"/><br />
+		<label for="message">Message</label> : <input type="text" name="message" id="message"/><br />
 		<input type="submit" value="Envoyer" />
+		</p>
 	</form>
-
 
 <?php 
 //Connexion à la base de donnée 
-	$bdd = new PDO('mysql:host=127.0.0.1;dbname=ma_base', 'root', '');
-	// Récupération des  derniers messages 
-	$reponse = $bdd->query('SELECT titre, texte FROM table_news ORDER BY ID DESC LIMITE 0, 10');
-	
-	//Affichage  de chaque message (toutes les données sont protégées par htmlspecialchars)
-	while ($donnees = $reponse->fetch());
-	{
-		echo '<p><strong>' . htmlspecialchars($données['titre']) . '</strong> : ' . htmlspecialchars($donnees['texte']) . '</p>';
-	}
-	$reponse->closeCursor();
+
+try
+{
+	$bdd = new PDO('mysql:host=localhost;dbname=ma_base', 'root', '');
+}
+catch(Exception $e)
+{
+        die('Erreur : '.$e->getMessage());
+}
+
+// Récupération des 10 derniers messages 
+$reponse = $bdd->query('SELECT pseudo,message FROM table_news ORDER BY ID DESC LIMITE 0, 10');
+
+	echo '<p>D autres ont aussi laissé leurs avis sur ce site :</p>';
+
+// Affichage de chaque message (toutes les données sont protégées par htmlspecialchars)
+while ($donnees = $reponse->fetch())
+{
+    echo '<p><strong>' . htmlspecialchars($donnees['pseudo']) . '</strong> : ' . htmlspecialchars($donnees['message']) . '</p>';	
+}
+
+$reponse->closeCursor();
 ?>
+<?php
+lect()
+?>
+
 	
 	</body>
 </html>
