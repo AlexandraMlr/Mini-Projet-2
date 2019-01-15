@@ -1,34 +1,42 @@
-# Projet Mini Projet 2 : Créer un site web dynamique 
-
 <!DOCTYPE html>
 <html>
 
+<table>
 <head>
 	<meta charset="utf-8" />
-	<link rel="stylesheet" href="new 1.css" />
-	<title>Site MP</title>
+	<link rel="stylesheet" href="MP2 Groupe 1 CSS.css" />
+	<title>Site MP2</title>
 </head>
 
 <body>
-
+<div id="container">
+	<nav> 
+		Menu 
+	</nav> 
+	
+	<ul>
+		<li><a class="poster un message.." href= "#">Ecrire à message à l'équipe</a></li>
+		<li><a class="poster un message.." href= "#">Voir les messages des visiteurs</a></li>
+		<li><a class="poster un message.." href= "#">Contacter l'équipe</a></li>
+	</ul>
+	
 	<button> Menu </button>
 	<script>
         let nav = document.querySelector('nav')
+		let ul = document.querySelector('ul')
         let btn = document.querySelector('button')
 
         btn.addEventListener('click', () => {
-			nav.classList.toggle('open')
-        })
+			nav.classList.toggle('open')})
+			
     </script>
-	
-	<nav> Menu </nav> 
 	
 	
 	<h1> Voici notre Site ! </h1>
 	<h2> Mini-Projet 2 </h2>
 	<p> Bonjour à vous, utilisateurs ! </p>
 	<p> Ce charmant site a été réalisé par le groupe 1, composé de Timothée Hémard, Alexandra Miler et Sixtine Vamparys. 
-	Nous sommes tous trois des étudiants en Terminale et lors de ce projet nous sommes lancé le défis de réaliser un site web dynamique. 
+	Nous sommes tous trois des étudiants en Terminale et lors de ce projet nous nous sommes lancé le défis de réaliser un site web dynamique. 
 	Nous espérons qu'il vous plait, sur ce nous vous souhaitons une bonne visite ! 
 	Notre objectif était de : 
 	Réaliser en collaboration un site web qui affiche des messages postés par les membres.</p>
@@ -63,7 +71,7 @@ if isset($_POST['motdepasse']))
 	</form>
 </div>
 
-
 </body>
+</table>
 
 </html>
