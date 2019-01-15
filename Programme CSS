@@ -1,6 +1,9 @@
-# Fiche CSS, du programme mini projet 2
-Et voilà le dossier CSS qui l'accompagne BISOUS
-
+div {
+	margin: 0 auto;
+	width: 1120px;
+	color: silver;
+	text-align: center;
+}
 h1 {
 	font-size: 40px;
 	font-family: Times New Roman; 
@@ -15,6 +18,10 @@ h2 {
 	text-align: center;
 }
 
+button {
+	text-align: center;
+}
+
 p {
 	font-family: Times New Roman;
 	Color: black;
@@ -26,10 +33,6 @@ body {
 	color: black;
 }
 
-button { 
-	text-align: center;
-}
-
 nav {
 	text-align: center;
 	position: fixed;
@@ -39,9 +42,20 @@ nav {
 	color: black;
 	transform: translateX(-100%);
 	transition: 0.3s;
-	<a href="http://www.google.fr">GOOGLE</a></
 }
 
 .open {
 	transform: translateX(0);
+}
+
+div {
+	text-align: center;
+}
+
+a {
+	color: maroon;
+}
+
+a:hover {
+	color: teal;
 }
