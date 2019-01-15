@@ -1,0 +1,47 @@
+/* Fiche CSS, du programme mini projet 2
+Et voilà le dossier CSS qui l'accompagne BISOUS*/
+
+h1 {
+	font-size: 40px;
+	font-family: Times New Roman; 
+	color: teal;
+	text-align: center;
+}	
+
+h2 {
+	font-size: 30px;
+	font-family: Times New Roman;
+	Color: teal;
+	text-align: center;
+}
+
+p {
+	font-family: Times New Roman;
+	Color: black;
+	text-align: justify;
+}
+
+body {
+	background-image: url("papier peint.jpg");
+	color: black;
+}
+
+button { 
+	text-align: center;
+}
+
+nav {
+	text-align: center;
+	position: fixed;
+	width: 300px;
+	height: 100vh;
+	background: silver;
+	color: black;
+	transform: translateX(-100%);
+	transition: 0.3s;
+	
+}
+
+.open {
+	transform: translateX(0);
+}
