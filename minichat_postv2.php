@@ -1,12 +1,10 @@
-<!DOCTYPE html>
-<html>
-<body>
 
 <?php
 // Connexion à la base de données 
 try 
 {
-	$bdd = new PDO ('mysql:host=localhost;dname=ma_base;charset=utf8', 'root', '');
+	$bdd = new PDO('mysql:host=localhost;dbname=ma_base', 'root', '');
+	$bdd->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 }
 catch(Exception $e)
 {		
@@ -14,11 +12,8 @@ catch(Exception $e)
 }
 	
 // Insertion du message à l'aide d'une requête préparée
-$req = $bdd->prepare('INSERT INTO minichat (pseudo, texte) VALUES(?, ?)');
+$req = $bdd->prepare('INSERT INTO table_news (pseudo, texte) VALUES(?, ?)');
 $req->execute(array($_POST['pseudo'], $_POST['texte']));
 // Redirecton du visiteur vers le page du minichat 
 	echo 'Merci de ta participation !';
 ?>
-
-</body>
-</html>
