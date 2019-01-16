@@ -35,7 +35,7 @@ catch(Exception $e)
 }
 
 // Récupération des 10 derniers messages 
-$reponse = $bdd->query('SELECT pseudo,message FROM table_news ORDER BY ID DESC LIMITE 0, 10');
+$reponse = $bdd->query('SELECT pseudo,message FROM table_news ORDER BY ID DESC LIMIT 0, 10');
 
 	echo '<p>D autres ont aussi laissé leurs avis sur ce site :</p>';
 
