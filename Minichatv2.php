@@ -17,7 +17,7 @@
 		<p>
 		<p>Laissez-nous un message ;)</p>
 		<label for="pseudo">Pseudo</label> : <input type="text" name="pseudo" id="pseudo"/><br />
-		<label for="message">Message</label> : <input type="text" name="message" id="texte"/><br />
+		<label for="texte">Message</label> : <input type="text" name="texte" id="texte"/><br />
 		<input type="submit" value="Envoyer" />
 		</p>
 	</form>
@@ -40,7 +40,8 @@ $reponse = $bdd->query('SELECT * FROM table_news ORDER BY ID DESC LIMIT 0, 10');
 // Affichage de chaque message (toutes les données sont protégées par htmlspecialchars)
 while ($donnees = $reponse->fetch())
 {
-    echo '<p> <strong>' . htmlspecialchars($donnees['pseudo']) . '</strong> :' . htmlspecialchars($donnees['texte']) . '</p>';	
+	echo '<p> <strong>' . htmlspecialchars($donnees['pseudo']) .'</p>';
+	echo '<p>.'  . htmlspecialchars($donnees['texte']) . '</p>';
 }
 $reponse->closeCursor();
 ?>
